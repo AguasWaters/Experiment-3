@@ -1,0 +1,52 @@
+// Create a C++ program which prints the letters in a char array in reverse order and shows the size of the array.
+
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+	int dimensions, avengers;
+	char endgame[50];
+	
+	cout << "Enter The Size Of Array : ";
+	cin >> dimensions;
+	cout << " " << endl;
+	cout << "Enter Array Elements : ";
+	
+	
+	for ( int i = 0; i < dimensions; i++ )
+	{
+		cin >> endgame[i];
+	}
+	
+	// Sorting array using selection sort...
+	
+	for ( int i = 0; i < dimensions; i++ )
+	{
+		for ( int j = i + 1; j < dimensions; j++)
+		{
+			if ( endgame[i] > endgame[j])
+			{
+				avengers = endgame[i];
+				endgame[i] = endgame [j];
+				endgame[j] = avengers;
+			}
+		}
+	}
+	
+	
+	cout << "The output (to the terminal) is: ";
+	
+	for ( int i = 0; i < dimensions; i++ )
+	{
+		cout <<  endgame[i];
+	}
+	cout << endl;
+	cout << "The Size Of The Array Is " << dimensions << endl;
+	cout << "Thank You!" << endl;
+	
+	_getch();
+	return 0;
+}
