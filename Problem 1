@@ -1,4 +1,5 @@
 // Create a C++ program to show the smallest and largest integer, the total, and the average of an array that take 10 elements only
+
 #include <iostream>
 #include <conio.h>
 
@@ -6,29 +7,29 @@ using namespace std;
 
 int main()
 {
-	int i, L, S;
+	int i, Largest, Smallest;
 	float Ave, arr[10], Total= 0.0;
 	
 	cout << "Input ten numbers " << endl;
 	
-	for ( i = 0; i < 10; i++ )
-	arr[i] = 0;
-	
 	for( i = 0; i < 10; i++)
-	cin >> arr[i];
-	
-	L= arr[0];
-	for ( i = 0; i < 10; i++)
 	{
-		if ( L < arr[i])
-		L = arr[i];
+		arr[i] = 0;
+		cin >> arr[i];
 	}
 	
-	S = arr[0];
+	Largest= arr[0];
+	for ( i = 0; i < 10; i++)
+	{
+		if ( Largest < arr[i])
+		Largest = arr[i];
+	}
+	
+	Smallest = arr[0];
 	for ( i = 0; i < 10; i++ )
 	{
-		if ( S > arr[i])
-		S = arr[i];
+		if ( Smallest > arr[i])
+		Smallest = arr[i];
 	}
 	
 	for( i = 0; i < 10; i++ )
@@ -37,9 +38,9 @@ int main()
 		Ave = (Total/10);
 	}
 	
-	cout << "The Largest Integer is " << L;
+	cout << "The Largest Integer is " << Largest;
 	cout << ' ' << endl;
-	cout << "The Smallest Integer is " << S;
+	cout << "The Smallest Integer is " << Smallest;
 	cout << ' ' << endl;
 	cout << "The Total of the ten numbers is " << Total;
 	cout << ' ' << endl;
